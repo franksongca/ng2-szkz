@@ -3,6 +3,7 @@ var path = require('path');
 var fs = require('fs');
 var webpack = require('webpack');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
@@ -290,6 +291,8 @@ module.exports = {
             chunks: ['polyfills', 'vendor', 'bundle'],
             chunksSortMode: orderByList(['polyfills', 'vendor', 'bundle'])
         }),
+
+        new OpenBrowserPlugin({ url: 'http://localhost:5000' }),
 
         new CopyWebpackPlugin(isTargetIonic2(target) ? [{
             from: '../../resources',

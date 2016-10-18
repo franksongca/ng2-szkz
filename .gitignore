@@ -21,6 +21,12 @@ dist/
 .tmp
 .cache/
 
+# .idea/
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/*.iws
+
+
 # Vendor files
 node_modules
 bower_components

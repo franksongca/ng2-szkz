@@ -39,3 +39,5 @@ npm run webpack:server
 npm run browsersync
 ```
 Visit your browser at `http://localhost:5000`
+
+## note - as a temp solution, define "@types/selenium-webdriver": "2.44.26" or "@types/selenium-webdriver": "2.44.*" in package to avoid specific errors.
